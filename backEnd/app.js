@@ -13,6 +13,11 @@ app.use(cors());
 // Aplica o middleware 'express.json()', que analisa as requisições com conteúdo JSON, convertendo-as automaticamente para objetos JavaScript acessíveis via 'req.body'
 app.use(express.json());
 
+// Conexão ao banco de dados
+// Importa a função de conexão ao banco de dados a partir do arquivo 'db/conn' e executa-a para estabelecer a conexão com o banco
+const conn = require("./db/conn");
+conn();  // Chama a função para conectar ao banco
+
 // Inicia o servidor para escutar na porta 3000 e executa uma função callback quando o servidor estiver online
 app.listen(3000, function() {
     console.log("Servidor Online!"); // Exibe a mensagem "Servidor Online!" no console quando o servidor estiver rodando
