@@ -1,0 +1,14 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name" : "Algum Outro Serviço",
+    "description": "Alguma Outra Descrição",
+    "price" : 2400,
+    "image" : "https://assets-prd.ignimgs.com/2022/04/13/pokemon-red-button-2022-1649888301240.jpg"
+}
+
+
+###
+
+GET http://localhost:3000/api/services
